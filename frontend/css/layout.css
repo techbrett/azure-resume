@@ -27,17 +27,45 @@ body { background: #0f0f0f; }
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
+#home {
+   background-image: url('images/header-bg-3000.jpg'); /* Path to your image */
+   background-size: cover; /* Adjust the image size to cover the header */
+   background-position: center; /* Center the image horizontally and vertically */
+   background-attachment: fixed; /* Fix the background when scrolling */
+   height: 100vh; /* Set the height of the header to the viewport height */
+}
 
 header {
    position: relative;
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 no-repeat top center;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
+   background-image: url('images/header-bg-3000.jpg');
+   background-size: cover;
+   -webkit-background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   z-index: 1;
+}
+
+
+header::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   z-index: -1;
+}
+
+.responsive-headline {
    text-align: center;
-   overflow: hidden;
+   margin: 0; /* Remove any default margins */
+   padding: 0; /* Remove any default padding */
 }
 
 /* vertically center banner section */
@@ -82,6 +110,36 @@ header .banner-text hr {
    border-color: rgba(150, 150, 150, .1);
 }
 
+.banner-text {
+   text-align: center;
+}
+
+.responsive-headline {
+   margin: 0;
+   padding: 0;
+}
+
+.social {
+   list-style: none;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.social li {
+   margin: 0 15px;
+}
+
+.social a {
+   color: white;
+   font-size: 24px;
+   transition: color 0.3s;
+}
+
+.social a:hover {
+   color: #f1f1f1; /* Change the color on hover */
+}
 /* header social links */
 header .social {
    margin: 24px 0;
