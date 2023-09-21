@@ -3,11 +3,6 @@ name: Build
 on:
   workflow_call:
   pull_request:
-on:
-    push:
-        branches: [ main ]
-        paths:
-        - 'frontend/**'
 
 jobs:
   build:
