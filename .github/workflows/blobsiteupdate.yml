@@ -29,8 +29,3 @@ jobs:
     - name: logout
       run: |
             az logout
-<<<<<<< HEAD
-      if: always()
-=======
-      if: always()
->>>>>>> 4281fc04bee826b2364b577544d8222ab53d93ea
