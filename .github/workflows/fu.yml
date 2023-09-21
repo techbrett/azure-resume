@@ -1,0 +1,5 @@
+name: godamnit
+
+on:
+  workflow_call:
+  pull_request:
