@@ -1,5 +1,8 @@
-name: just fucking work site
+name: Build
 
+on:
+  workflow_call:
+  pull_request:
 on:
     push:
         branches: [ main ]
