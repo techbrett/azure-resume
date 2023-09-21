@@ -1,0 +1,42 @@
+[33mcommit 11ddd732862dd6f2c78ce43e8649d9776b18a42a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: techbrett <brett.hagenauer@gmail.com>
+Date:   Mon Sep 18 18:35:25 2023 -0400
+
+    Updated background image in html and css for faded style
+
+[33mcommit e1906d8d0c79d70a71bdb6f8140a279ed450dd3e[m
+Merge: 2d6748a 1504de7
+Author: techbrett <brett.hagenauer@gmail.com>
+Date:   Sun Sep 17 23:39:03 2023 -0400
+
+    Updates to index.html file - Merge branch 'main' of https://github.com/techbrett/azure-resume
+
+[33mcommit 2d6748afcd852bb44dcb96c20f8e958ff1cb7550[m
+Author: techbrett <brett.hagenauer@gmail.com>
+Date:   Sun Sep 17 23:38:39 2023 -0400
+
+    Updates to index.html file
+
+[33mcommit 1504de7bb430cdbdf80c338bac84c48690a5182d[m
+Author: Brett Hagenauer <121993966+techbrett@users.noreply.github.com>
+Date:   Sun Sep 17 00:52:59 2023 -0400
+
+    Add or update the Azure App Service build and deployment workflow config
+
+[33mcommit e46de22239d9489913de44330a56c59d20d86dde[m
+Author: techbrett <brett.hagenauer@gmail.com>
+Date:   Sat Sep 16 18:42:34 2023 -0400
+
+    Initial commit
+
+[33mcommit df44d650ae61331cdf46be497c341936d9ba431a[m
+Author: techbrett <brett.hagenauer@gmail.com>
+Date:   Fri Sep 15 10:35:50 2023 -0400
+
+    test
+
+[33mcommit 988675d6a4db85a583c408673455b3de0ae353c7[m
+Author: Brett Hagenauer <121993966+techbrett@users.noreply.github.com>
+Date:   Fri Sep 15 10:27:07 2023 -0400
+
+    Initial commit

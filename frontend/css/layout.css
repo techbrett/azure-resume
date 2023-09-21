@@ -35,6 +35,10 @@ body { background: #0f0f0f; }
    height: 100vh; /* Set the height of the header to the viewport height */
 }
 
+header .banner-text h1 {
+   color: #fff; /* Add this line to set the text color to white */
+   /* Other styles for h1 element */
+}
 header {
    position: relative;
    height: 800px;
@@ -154,6 +158,18 @@ header .social li {
 }
 header .social li a { color: #fff; }
 header .social li a:hover { color: #11ABB0; }
+
+@media (max-width: 768px) {
+  .row .three.columns {
+    text-align: center; /* Center the image */
+  }
+
+  .profile-pic {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    margin-bottom: 20px; /* Add some spacing below the image */
+  }
+}
 
 /* scrolldown link */
 header .scrolldown a {
