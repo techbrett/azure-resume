@@ -3,8 +3,6 @@ name: update site
 on:
     push:
         branches: [ main ]
-        paths:
-        - 'frontend/**'
 
 jobs:
   build:
