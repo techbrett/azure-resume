@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 from azure.cosmos import CosmosClient, PartitionKey
@@ -21,9 +22,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         enable_cross_partition_query=True):
         if 'visitors' in item:
             item['visitors'] += 1
-    else:
-        # If 'visitors' key doesn't exist, initialize it
-        item['visitors'] = 1
-    container.upsert_item(item)
+        else:
+            # If 'visitors' key doesn't exist, initialize it
+            item['visitors'] = 1
+        container.upsert_item(item)
 
-    return func.HttpResponse("Visitor count updated.", status_code=200)
+    response_data = {"message": "Visitor count updated.",
+    "status_code": 200,
+    "count": item['visitors']} # Use 'item['visitors']' to get the count from CosmosDB
+    response_json = json.dumps(response_data)
+    logging.info(f'Response JSON: {response_json}')  # Log the response data
+
+    return func.HttpResponse(response_json, status_code=200)
