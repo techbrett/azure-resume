@@ -18,11 +18,31 @@ const getVisitCount = () => {
     .then(response => {
         console.log("Website called function API."); // Debug message
         count = response.count;
-        document.getElementById('counter').innerText = count;
+
+        // Get the last digit of the count
+        const lastDigit = count % 10;
+        
+        // Determine the appropriate suffix based on the last digit
+        let suffix;
+        switch (lastDigit) {
+            case 1:
+                suffix = "st";
+                break;
+            case 2:
+                suffix = "nd";
+                break;
+            case 3:
+                suffix = "rd";
+                break;
+            default:
+                suffix = "th";
+        }
+
+        document.getElementById('counter').innerText = `${count}${suffix}`;
     }).catch(function(error) {
         console.error("Error:", error); // Debug message
         console.log(error);
-      });
-      console.log("Returning count:", count); // Debug message
+    });
+    console.log("Returning count:", count); // Debug message
     return count;
 }
