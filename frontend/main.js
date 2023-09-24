@@ -1,18 +1,23 @@
-window.addEventListener('DOMContentLoaded', (event) =>{
+window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
-})
+});
 
-const functionAPi = '';
+
+const localApi = 'http://localhost:7071/api/UpdateVisitorCounter';
+const functionApi = 'https://pythoncounter.azurewebsites.net/api/UpdateVisitorCount?code=CV2o1cNOLDRT-jtkF5p_DcOpQe-jpO6vi-_QKBOjul6_AzFul9thKQ=='; 
 
 const getVisitCount = () => {
     let count = 30;
-    fetch(functionApi).then(response => {
+    fetch(functionApi)
+    .then(response => {
         return response.json()
-    }).then(response =>{
+    })
+    .then(response => {
         console.log("Website called function API.");
-        document.getElementById("counter").innerText = count;
-    }).catch(function(error){
-        console.log(error)
-    });
+        count = response.count;
+        document.getElementById('counter').innerText = count;
+    }).catch(function(error) {
+        console.log(error);
+      });
     return count;
 }
