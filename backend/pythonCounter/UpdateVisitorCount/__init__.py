@@ -15,11 +15,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     database = client.get_database_client(database_name)
     container = database.get_container_client(container_name)
 
-    # assuming your items have a 'visits' field
+    # assuming your items have a 'visitors' field
     for item in container.query_items(
-            query='SELECT * FROM c WHERE c.id = "visitorCount"',
-            enable_cross_partition_query=True):
-        item['visits'] += 1
-        container.upsert_item(item)
+        query='SELECT * FROM c WHERE c.id = "visitorCount"',
+        enable_cross_partition_query=True):
+        if 'visitors' in item:
+            item['visitors'] += 1
+    else:
+        # If 'visitors' key doesn't exist, initialize it
+        item['visitors'] = 1
+    container.upsert_item(item)
 
     return func.HttpResponse("Visitor count updated.", status_code=200)

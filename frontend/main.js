@@ -16,7 +16,8 @@ const getVisitCount = () => {
         return response.json()
     })
     .then(response => {
-        console.log("Response received"); // Debug message
+        console.log("Response received", response); // Debug message
+        return response.json();
         count = response; document.getElementById('counter').innerText = count;
     }).catch(function(error) {
         console.log("Error:", error); // Debug message
