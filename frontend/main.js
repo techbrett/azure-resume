@@ -13,23 +13,16 @@ const getVisitCount = () => {
     fetch(functionApi)
     .then(response => {
         console.log("After fetch"); // Debug message
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.text(); // Parse response as text
+        return response.json() // Parse response as json
     })
-    .then(responseText => {
-        console.log("Response received"); // Debug message
-        count = parseInt(responseText); // Convert response text to integer
-        if (!isNaN(count)) {
-            document.getElementById('counter').innerText = count;
-        } else {
-            console.error("Invalid response: Count is not a number.");
-        }
-    })
-    .catch(function(error) {
+    .then(response => {
+        console.log("Website called function API."); // Debug message
+        count = response.count;
+        document.getElementById('counter').innerText = count;
+    }).catch(function(error) {
         console.error("Error:", error); // Debug message
-    });
-    console.log("Returning count:", count); // Debug message
+        console.log(error);
+      });
+      console.log("Returning count:", count); // Debug message
     return count;
 }
