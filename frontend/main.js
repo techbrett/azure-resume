@@ -3,11 +3,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-const localApi = 'http://localhost:7071/api/UpdateVisitorCounter';
+const localApi = 'http://localhost:7071/api/UpdateVisitorCount';
 const functionApi = 'https://pythoncounter.azurewebsites.net/api/UpdateVisitorCount?code=CV2o1cNOLDRT-jtkF5p_DcOpQe-jpO6vi-_QKBOjul6_AzFul9thKQ=='; 
 
 const getVisitCount = () => {
-    let count = 30;
+    let count = 0;
     fetch(functionApi)
     .then(response => {
         return response.json()
