@@ -9,17 +9,19 @@ const functionApi = 'https://pythoncounter.azurewebsites.net/api/UpdateVisitorCo
 
 const getVisitCount = () => {
     let count = 0;
+    console.log("Before fetch"); // Debug message
     fetch(functionApi)
     .then(response => {
-        return response.json();
+        console.log("After fetch"); // Debug message
+        return response.json()
     })
     .then(response => {
-        console.log("Website called function API.");
+        console.log("Response received"); // Debug message
         count = response.count;
         document.getElementById('counter').innerText = count;
-    })
-    .catch(function(error) {
-        console.log(error);
+    }).catch(function(error) {
+        console.log("Error:", error); // Debug message
     });
+    console.log("Returning count:", count); // Debug message
     return count;
 }
