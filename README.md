@@ -65,7 +65,7 @@ The visitor counter uses an Azure Function with an HTTP Trigger and a CosmosDB i
   - Be sure to check **_Enable Access-Control-Allow-Credentials_**
 
 ## CI/CD
-Once I had the storage container and static website setup, it was really nice to be able to push updates via GitHub and have a Workflow automatically update the contents of the container. 
+Once I had the storage container and static website setup, it was really nice to be able to push updates via GitHub and have a Workflow automatically update the contents of the container. Plus this workflow purges the CDN cache so that any updates you make are immediately reflected.
 - I followed Microsoft's docs on [Using GitHub Actions workflow to deploy a static website in Azure Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions?tabs=userlevel) which was mostly straightfoward. However, I ran into a huge roadblock where my workflow couldn't login to my Azure account, despite having the secret in place. I had to use `--auth-mode login` in order for this to authenticate and work properly when using azure/CLI@v1
 - I used this quick guide to learn how to [update my GitHub repo from my local drive](https://medium.com/@avivamazurek/how-to-update-a-github-repository-from-your-local-drive-e765eb48a691)
 - I didn't implement this yet, but this guide documents [Using GitHub Actions for deploying to Azure Functions](https://github.com/marketplace/actions/azure-functions-action)
