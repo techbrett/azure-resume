@@ -1,7 +1,5 @@
 # Azure Cloud Resume Challenge
 
-<img src="/frontend/images/site.png" alt="image of site" style="border: 5px solid #ccc; border-radius: 15px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);">
-
 # Cloud Resume Challenge for Azure
 
 Welcome to my Cloud Resume Challenge for Azure project! ☁️
