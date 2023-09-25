@@ -1,5 +1,7 @@
 # Azure Cloud Resume Challenge
 
+![screenshot of techbrett.net](/frontend/images/site3.png)
+
 # Cloud Resume Challenge for Azure
 
 Welcome to my Cloud Resume Challenge for Azure project! ☁️
