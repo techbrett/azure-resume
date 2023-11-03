@@ -16,12 +16,12 @@ Whether you're a seasoned pro or a newbie to Azure, I hope my project inspires a
 
 # This challenge is composed of 8 main parts:
 
-1. Configuring a Static Website via Azure Storage with a custom domain and HTTP
-2. Writing your resume in HTML and formatting it with CSS
+1. Configure a Static Website via Azure Storage with a custom domain and HTTP
+2. Write your resume in HTML and formatting it with CSS
 3. Setup Azure Storage account and enable Static Website
 4. Configure GitHub Actions for CI/CD with Azure Storage
 5. Enable CDN for HTTPS access to your website and custom domain
-6. Use Azure Function App to interact with CosmosDB API to update a visitor counter
+6. Use Azure Functions App to interact with CosmosDB API to update a visitor counter
 7. Write javascript to capture the result of the visitor counter function and display it on the site
 8. Write a blog entry to document the journey
 
