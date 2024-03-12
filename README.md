@@ -27,16 +27,16 @@ Whether you're a seasoned pro or a newbie to Azure, I hope my project inspires a
 
 
 ## Prerequisites
-- [GitHub account](https://github.com/join)
 - [Azure account](https://azure.microsoft.com/en-us/free)
+- [GitHub account](https://github.com/join)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [Python 3.11.5](https://www.python.org/downloads/) or [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-- [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local)
+- - [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local)
 - [Visual Studio Code](https://code.visualstudio.com)
   - [Visual Code Extensions](https://code.visualstudio.com/docs/introvideos/extend)
   - [Azure Functions Extensions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
   - [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) or [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
   - [Azure Storage Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage)
+- [Python 3.11.5](https://www.python.org/downloads/) or [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 - Optional
   - [Azure Storage Explorer](https://www.namecheap.com/hosting/shared/)
   - [A cheap shared hosting provider to host a Wordpress blog](https://www.namecheap.com/hosting/shared/)
