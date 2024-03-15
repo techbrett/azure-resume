@@ -191,8 +191,36 @@ header .scrolldown a {
    -o-transition: all .3s ease-in-out;
    transition: all .3s ease-in-out;
 }
-header .scrolldown a:hover { color: #11ABB0; }
+/* New CSS for scroll down arrow */
+.scrolldown {
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+}
 
+.scrolldown a {
+   color: #fff;
+   display: block;
+   height: 42px;
+   width: 42px;
+   font-size: 42px;
+   line-height: 42px;
+   border-radius: 100%;
+   animation: arrowBounce 2s infinite;
+}
+
+@keyframes arrowBounce {
+   0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+   }
+   40% {
+      transform: translateY(-10px);
+   }
+   60% {
+      transform: translateY(-5px);
+   }
+}
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
