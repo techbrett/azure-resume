@@ -84,7 +84,7 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
@@ -200,15 +200,16 @@ header .scrolldown a {
 }
 
 .scrolldown a {
-   color: #fff;
-   display: block;
-   height: 42px;
-   width: 42px;
-   font-size: 42px;
-   line-height: 42px;
-   border-radius: 100%;
-   animation: arrowBounce 2s infinite;
+   color: #fff !important;
+   display: block !important;
+   height: 42px !important;
+   width: 42px !important;
+   font-size: 42px !important;
+   line-height: 42px !important;
+   border-radius: 100% !important;
+   animation: arrowBounce 2s infinite !important;
 }
+
 
 @keyframes arrowBounce {
    0%, 20%, 50%, 80%, 100% {
