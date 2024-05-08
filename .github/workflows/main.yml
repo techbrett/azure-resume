@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4S
+    - uses: actions/checkout@v4
     - uses: Azure/login@v1
       with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
@@ -15,7 +15,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name techbrett2 --auth-mode login -d '$web' -s .
+            az storage blob upload-batch --account-name techbrett2 --auth-mode login -d '$web' -s frontend/ --overwrite
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
