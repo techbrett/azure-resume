@@ -1,25 +1,28 @@
-name: Run Azure Login with OpenID Connect and PowerShell
-on: [push]
+name: update site
 
-permissions:
-  id-token: write
-  contents: read
-      
-jobs: 
-  Windows-latest:
-    runs-on: windows-latest
+on:
+    push:
+        branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: OIDC Login to Azure Public Cloud with AzPowershell (enableAzPSSession true)
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
-          enable-AzPSSession: true
-
-      - name: 'Get resource group with PowerShell action'
-        uses: azure/az login
-        with:
-          inlineScript: |
-            Get-AzResourceGroup
-          azPSVersion: "latest"
+    - uses: actions/checkout@v4
+    - uses: Azure/login@v1
+      with:
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob upload-batch --account-name techbrett2 --auth-mode login -d '$web' -s . -overwrite
+    - name: Purge CDN endpoint
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+           az cdn endpoint purge --content-paths  "/*" --profile-name "techbrett2" --name "techbrett2" --resource-group "techbrett"
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
